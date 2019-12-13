@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    background-color: #232020;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin: 20px;
+    background-color: #ff7315;
+    padding: 30px 25px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 50px;
+    flex-direction: column;
+    letter-spacing: 1px;
+    color: #f4f4f4;
+}
+
+form input {
+    margin-bottom: 20px;
+}
+
+form .input label {
+    margin-bottom: 20px;
+}
+
+form .input input {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    padding: 7px;
+    font-size: 20px;
+    color: turquoise;
+    border-radius: 2px;
+    border: 1px solid #ccddef;
+    outline-color: slateblue;
+}
+
+form .btn-login {
+    display: block;
+    min-width: 120px;
+    border: none;
+    background-color : #3a3535;
+    color: white;
+    border-radius: 25px;
+    margin: auto;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    animation: fade;
+    animation-duration: 1s;
+}
+
+form {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes move {
+    from {
+        
+    }
+}
+
+.form-hide {
+    animation: down 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down {
+    from {
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(100vh);
+    }
+}
+
+form.validateError {
+    animation: vibrate 200ms linear, fade paused;
+    animation-iteration-count: 3;
+}
+
+@keyframes vibrate {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-15%);
+    }
+    70% {
+        transform: translateX(15%);
+    }
+}
+
+.done {
+    opacity: 0;
+    animation: appear;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
